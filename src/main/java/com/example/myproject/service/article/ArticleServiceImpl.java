@@ -6,6 +6,7 @@ import com.example.myproject.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +33,10 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Optional<Article> findArticleById(Long id) {
         return articleRepository.findById(id);
+    }
+
+    @Override
+    public void saveAll(Collection<Article> list) {
+        articleRepository.saveAll(list);
     }
 }

@@ -32,10 +32,18 @@ public class User implements UserDetails {
     @JoinColumn(name = "user_id")
     private Set<Article> articles = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+    public User(String firstName, String lastName, String email, String password, String photoUrl) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.photoUrl = photoUrl;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

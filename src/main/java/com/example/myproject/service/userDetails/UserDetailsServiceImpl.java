@@ -1,6 +1,5 @@
 package com.example.myproject.service.userDetails;
 
-import com.example.myproject.entity.User;
 import com.example.myproject.exception.NotFoundEntityException;
 import com.example.myproject.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

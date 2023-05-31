@@ -7,7 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
@@ -55,7 +58,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
             articles.add(articleDto);
         }
 
-        return articles;
+        return articles.stream().sorted(Comparator.comparing(ArticleDto::getDate)).collect(Collectors.toList());
     }
 
 }

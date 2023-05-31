@@ -22,4 +22,15 @@ public class Article {
     private String title;
     private LocalDateTime date = LocalDateTime.now();
     private String imageUrl;
+
+    public Article(String body, String title,  String imageUrl) {
+        this.body = body;
+        this.title = title;
+        this.imageUrl = imageUrl;
+    }
+
+    public Article(String body, String title) {
+        this.body = body;
+        this.title = title;
+    }
 }

@@ -38,13 +38,14 @@ function loadArticles() {
             postText.classList.add('post-text');
             postText.textContent = post.body;
             postContent.appendChild(postText);
-
-            if (post.image) {
+            if(post.imageUrl !== "") {
                 const postImage = document.createElement('img');
+                postImage.classList.add("post-image")
                 postImage.src = post.imageUrl;
                 postImage.alt = 'Post Image';
                 postContent.appendChild(postImage);
             }
+
 
             postElement.appendChild(postContent);
 

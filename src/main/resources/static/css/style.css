@@ -1,76 +1,3 @@
-body {
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background: #dff9fb
-}
-
-.Reg {
-    position: absolute;
-    left: 22.02%;
-    right: 22.02%;
-    top: 64.3%;
-    bottom: 32.08%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 27px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #000000;
-}
-
-.Reg {
-    text-decoration: none;
-}
-
-.Main_h {
-    position: absolute;
-    width: 495px;
-    height: 667px;
-    left: 472px;
-    top: 139px;
-    background-color: #FFFFFF;
-    opacity: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.Enter {
-    position: absolute;
-    left: 40.4%;
-    right: 40.61%;
-    top: 11.41%;
-    bottom: 79.46%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 68px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #000000;
-}
-
-.Post {
-    position: absolute;
-    left: 23.84%;
-    right: 61.62%;
-    top: 27.92%;
-    bottom: 66.58%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 41px;
-    /* identical to box height */
-
-    text-align: center;
-}
-
 .Password {
     position: absolute;
     left: 23.23%;
@@ -89,46 +16,9 @@ body {
     color: #000000;
 }
 
-.Button {
-    position: absolute;
-    left: 25.22%;
-    right: 25.22%;
-    top: 75%;
-    bottom: 0%;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 41px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #000000;
-}
-
-.b1 {
-    background: #EDB423;
-    border-radius: 8px;
-}
-
 .back {
     position: absolute;
     top: 13px;
-}
-.base {
-
-}
-html,
-body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: #f5f5f5;
 }
 
 .form-signin {
@@ -159,15 +49,6 @@ body {
     border-top-right-radius: 0;
 }
 
-header {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    height: 50px;
-    top: 0px;
-    background-color: #D245C3;
-
-}
 
 footer {
     height: 100px;
@@ -186,179 +67,6 @@ footer {
     Left: 1200px;
 }
 
-.mainPage_h {
-    position: absolute;
-    top: 16px;
-    left: 30px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 14px;
-    letter-spacing: 0.035em;
-    text-decoration: none;
-    color: #000000;
-    background: #EDB423;
-    border-radius: 5px;
-}
-
-.mainPage_h:hover {
-    text-decoration: underline white;
-    color: white;
-}
-
-.profile_h {
-    position: absolute;
-    left: 134px;
-    top: 16px;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 14px;
-    letter-spacing: 0.035em;
-    text-decoration: none;
-    color: #000000;
-    background: #EDB423;
-    border-radius: 5px;
-}
-
-.profile_h:hover {
-    text-decoration: underline white;
-    color: white;
-}
-
-.newpost_h {
-    position: absolute;
-    left: 253px;
-    top: 16px;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 14px;
-    letter-spacing: 0.035em;
-    text-decoration: none;
-    color: #000000;
-    background: #EDB423;
-    border-radius: 5px;
-}
-
-.newpost_h:hover {
-    text-decoration: underline white;
-    color: white;
-}
-
-.IN {
-    position: absolute;
-    left: 1300px;
-    top: 16px;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 14px;
-    letter-spacing: 0.035em;
-    text-decoration: none;
-    color: #000000;
-    background: #EDB423;
-    border-radius: 5px;
-}
-
-.IN:hover {
-    text-decoration: underline white;
-    color: white;
-}
-
-
-.mainPage {
-    position: absolute;
-    left: 3.11%;
-    right: 90.05%;
-    top: 20.14%;
-    bottom: 49.64%;
-
-    font-family: 'Irish Grover';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 29px;
-    text-align: center;
-
-    color: #000000
-
-}
-
-.mainPage {
-    text-decoration: none;
-}
-
-.profile {
-    position: absolute;
-    left: 15.69%;
-    right: 76.78%;
-    top: 20.14%;
-    bottom: 58.99%;
-
-    font-family: 'Irish Grover';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 29px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #000000
-}
-
-.profile {
-    text-decoration: none;
-}
-
-.newpost {
-    position: absolute;
-    left: 28.96%;
-    right: 60.33%;
-    top: 20.14%;
-    bottom: 58.99%;
-
-    font-family: 'Irish Grover';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 29px;
-    /* identical to box height */
-
-    text-align: center;
-
-    color: #000000;
-}
-
-.newpost {
-    text-decoration: none;
-}
-
-.IN1 {
-    position: absolute;
-    left: 44.57%;
-    right: 48.45%;
-    top: 22.3%;
-    bottom: 61.15%;
-
-    font-family: 'Irish Grover';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-
-    color: #000000;
-}
-
-.IN1 {
-    text-decoration: none;
-}
 
 .post {
     display: flex;
@@ -382,6 +90,7 @@ footer {
 
 .post-content {
     margin-left: 10px;
+    margin-bottom: 15px
 }
 
 .post-title {
@@ -404,15 +113,126 @@ footer {
 }
 
 .post-container {
-    width: 300px; /* Фиксированная ширина контейнера */
-    max-width: 100%; /* Ограничение максимальной ширины контейнера */
-    background-color: rgba(255, 255, 255, 0.8); /* Белый полупрозрачный фон */
-    margin: 10px; /* Внешние отступы между постами */
-    padding: 10px; /* Внутренние отступы внутри блока поста */
+    width: 60%;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    padding: 10px;
     border-radius: 5px; /* Закругленные углы блока поста */
 }
 
 .post-container:hover {
     background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон при наведении */
 }
+
+
+body {
+    background-image: url("/static/img/img1.jpg");
+    background-size: cover; /* Растянуть фон на всю площадь */
+    background-repeat: no-repeat;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50px; /* Оставить место для футера */
+    overflow: auto; /* Включить прокрутку, если необходимо */
+    scrollbar-width: thin; /* Скрыть полосу прокрутки в большинстве браузеров */
+    scrollbar-color: transparent transparent;
+/
+}
+
+
+.container::-webkit-scrollbar {
+    width: 6px; /* Ширина полосы прокрутки в WebKit-браузерах */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Цвет полосы прокрутки в WebKit-браузерах */
+}
+
+.flex-header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #D245C3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+#postsContainer {
+    margin-top: 60px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.main-button {
+    font-family: 'Raleway', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 14px;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    color: #000000;
+    background: #EDB423;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.login-button {
+    margin-left: auto;
+}
+
+.main-button:hover {
+    text-decoration: underline white;
+    color: white;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer-button {
+    color: black;
+    margin-right: 10px;
+}
+
+.copyright {
+    margin-left: auto;
+    color: white;
+}
+
+
 
