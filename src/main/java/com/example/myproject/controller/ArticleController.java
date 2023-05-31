@@ -19,10 +19,12 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("v1/api/articles")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class ArticleController {
 
     private final ArticleService articleService;
@@ -36,7 +38,7 @@ public class ArticleController {
     }
 
 
-    @PostMapping(consumes = {"multipart/form-data"},
+    @PostMapping(value = "/post",consumes = {"multipart/form-data"},
             produces = {"application/json", "application/xml"})
     public ResponseEntity<Void> uploadArticle(@RequestParam String title,
                                               @RequestParam String body,
@@ -46,9 +48,9 @@ public class ArticleController {
         if(userDetails.getUsername() == null) {
             response.sendRedirect("/login");
         }
-        String time = LocalDateTime.now().toString();
+        String time = UUID.randomUUID().toString();
         uploadService.store(file, time);
-        Article article = new Article(title, body, "img/"+ time + file.getOriginalFilename());
+        Article article = new Article(title, body,  time + file.getOriginalFilename());
         articleService.saveArticle(article);
         User user = userService.findUserByEmail(userDetails.getUsername()).get();
         user.getArticles().add(article);

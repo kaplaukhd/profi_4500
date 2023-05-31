@@ -5,7 +5,7 @@ import org.springframework.boot.web.servlet.MultipartConfigFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
-import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.*;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.util.unit.DataSize;
 import org.springframework.web.multipart.MultipartResolver;
@@ -84,6 +84,10 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         converters.add(jacksonConverter());
+        converters.add(new ByteArrayHttpMessageConverter());
+        converters.add(new BufferedImageHttpMessageConverter());
+        converters.add(new StringHttpMessageConverter());
+        converters.add(new ResourceHttpMessageConverter());
     }
 
     @Bean

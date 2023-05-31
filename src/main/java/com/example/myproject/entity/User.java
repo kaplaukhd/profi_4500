@@ -45,6 +45,13 @@ public class User implements UserDetails {
         this.photoUrl = photoUrl;
     }
 
+    public User(String firstName, String lastName, String email, String password ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles.stream().map(x -> new SimpleGrantedAuthority(x.getName())).toList();

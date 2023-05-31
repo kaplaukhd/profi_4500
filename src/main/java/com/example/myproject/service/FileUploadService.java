@@ -20,12 +20,12 @@ public class FileUploadService {
     public void store(MultipartFile file, String time) {
         if (!file.isEmpty()) {
             try {
-                Path path = Paths.get("src/main/resources/static/img/" + time + file.getOriginalFilename());
+                String folderPath = "/app/images/";
+                String fileName = time + file.getOriginalFilename();
+                Path path = Paths.get(folderPath + fileName);
                 byte[] bytes = file.getBytes();
-                BufferedOutputStream stream =
-                        new BufferedOutputStream(new FileOutputStream(Files.createFile(path).toFile()));
-                stream.write(bytes);
-                stream.close();
+                Files.createDirectories(path.getParent()); // Создать директорию, если ее нет
+                Files.write(path, bytes); // Сохранить файл
             } catch (IOException e) {
                 log.error(e.getMessage());
             }

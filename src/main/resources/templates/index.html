@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <body>
+<div id="notification"></div>
 <div class="modal" id="createPostModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -16,7 +17,7 @@
                     <h5 class="modal-title">Создать пост</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
-            <form enctype="multipart/form-data" method="POST" action="/v1/api/articles">
+            <form id="newArticleForm" enctype="multipart/form-data" method="POST" action="/v1/api/articles/post">
                 <div class="modal-body">
                     <p>Заголовок:</p>
                     <label >
@@ -24,17 +25,16 @@
                     </label>
                     <label>
                         <p>Текст поста:</p>
-
                     <textarea cols="43" name="body" id="body" required>
                         </textarea >
                     </label>
                     <br>
                     <p>Загрузите фото</p>
-                    <p><input type="file" name="file" multiple accept="image/*, image/jpeg">
+                    <p><input type="file" name="file"  accept="image/*, image/jpeg"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                    <button type="submit" class="btn btn-primary">Создать</button>
+                    <button id="newArticleButton" type="submit" class="btn btn-primary">Создать</button>
                 </div>
             </form>
         </div>
@@ -68,7 +68,6 @@
     <div class="footer-container">
         <a href="/" class="footer-button">Главная</a>
         <a href="/profile" class="footer-button">Профиль</a>
-        <a href="/create" class="footer-button">Создать пост</a>
         <a href="/login" class="footer-button">Вход</a>
     </div>
     <span class="copyright">Разработано Семенова У.В.</span>

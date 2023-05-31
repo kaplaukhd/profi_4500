@@ -1,4 +1,4 @@
-import {getArticles} from "./export.js";
+import {getArticles, newArticle, registration, showNotification} from "./export.js";
 
 
 window.onload = () => {
@@ -6,6 +6,9 @@ window.onload = () => {
 }
 
 const postsContainer = document.getElementById('postsContainer');
+const form = document.getElementById('newArticleForm')
+const formButton = document.getElementById('newArticleButton')
+const close = document.getElementById('closeNewArticle')
 
 function loadArticles() {
     getArticles().then(data =>
@@ -16,7 +19,7 @@ function loadArticles() {
             const avatarElement = document.createElement('div');
             avatarElement.classList.add('avatar');
             const avatarImg = document.createElement('img');
-            avatarImg.src = post.avatarUrl;
+            avatarImg.src = '/images/' + post.avatarUrl;
             avatarImg.alt = 'User Avatar';
             avatarElement.appendChild(avatarImg);
             postElement.appendChild(avatarElement);
@@ -38,10 +41,10 @@ function loadArticles() {
             postText.classList.add('post-text');
             postText.textContent = post.body;
             postContent.appendChild(postText);
-            if(post.imageUrl !== "") {
+            if (post.imageUrl !== "") {
                 const postImage = document.createElement('img');
                 postImage.classList.add("post-image")
-                postImage.src = post.imageUrl;
+                postImage.src = '/images/' + post.imageUrl;
                 postImage.alt = 'Post Image';
                 postContent.appendChild(postImage);
             }
@@ -52,3 +55,6 @@ function loadArticles() {
             postsContainer.appendChild(postElement);
         }))
 }
+
+
+

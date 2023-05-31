@@ -7,14 +7,16 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
-    @Query("SELECT u.photoUrl AS avatarUrl, a.title, a.date, CONCAT(u.firstName, ' ', u.lastName) AS author, a.body, a.imageUrl FROM users u JOIN u.articles a")
+    @Query("SELECT u.photoUrl AS avatarUrl," +
+            "a.title," +
+            " a.date," +
+            " CONCAT(u.firstName, ' ', u.lastName) AS author," +
+            " a.body," +
+            " a.imageUrl FROM users u JOIN u.articles a order by a.date")
 
     List<Object[]> getAllArticleData();
 
@@ -58,7 +60,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
             articles.add(articleDto);
         }
 
-        return articles.stream().sorted(Comparator.comparing(ArticleDto::getDate)).collect(Collectors.toList());
+        return articles;
     }
 
 }

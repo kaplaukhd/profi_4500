@@ -14,4 +14,8 @@ public interface UserService {
     void removeUser(User user);
 
     UserDto getUserInfo(String username);
+
+    void register(User user);
+
+    void changePassword(User user);
 }

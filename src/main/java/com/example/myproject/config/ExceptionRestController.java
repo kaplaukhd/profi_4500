@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 public class ExceptionRestController {
 
     @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorResponse> globalException(RuntimeException exception) {
-        ErrorResponse error = new ErrorResponse(
+    public ResponseEntity<Response> globalException(RuntimeException exception) {
+        Response error = new Response(
                 exception.getMessage(),
                 LocalDateTime.now(),
                 HttpStatus.INTERNAL_SERVER_ERROR,
@@ -23,8 +23,8 @@ public class ExceptionRestController {
     }
 
     @ExceptionHandler(UserNotAuthenticatedException.class)
-    public ResponseEntity<ErrorResponse> notAuthenticatedException(UserNotAuthenticatedException exception) {
-        ErrorResponse error = new ErrorResponse(
+    public ResponseEntity<Response> notAuthenticatedException(UserNotAuthenticatedException exception) {
+        Response error = new Response(
                 exception.getMessage(),
                 LocalDateTime.now(),
                 HttpStatus.FORBIDDEN,
