@@ -342,3 +342,19 @@ footer {
 .input-file:focus {
     border-color: #aaa;
 }
+
+.form-avatar {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.form-edit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: stretch;
+    justify-content: center;
+}

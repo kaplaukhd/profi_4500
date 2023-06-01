@@ -80,23 +80,21 @@
                         <p id="email" class="">Почта</p>
                         <p id="posts" class="">Количество постов</p>
                         <br>
-                            <form method="post" enctype="multipart/form-data" action="/v1/api/user/update/avatar">
-                                <div class="input-group">
+                            <form class="form-avatar" method="post" enctype="multipart/form-data" action="/v1/api/user/update/avatar">
+                                <div class="" style="display: flex; align-items: center; justify-items: center; justify-content: space-around" >
                                     <label class="input-file">
                                         <input id="upload" type="file" name="file" class="form-control avatar-field">
                                         <span class="input-file-text">Выберите изображение</span>
                                     </label>
-                                        <br>
-                                    <br>
-                                    <div class="input-group-append">
-                                        <button type="submit" class="input-file-btn btn btn-primary">Отправить</button>
-                                    </div>
+                                </div>
+                                <div  style="margin: 15px; position: e">
+                                    <button type="submit" class="input-file-btn btn btn-primary">Отправить</button>
                                 </div>
                             </form>
                     </div>
                     <div id="change-password" class="tab-pane fade">
                         <h4>Сменить пароль</h4>
-                        <form id="changePasswordForm">
+                        <form class="form-edit" id="changePasswordForm">
                             <div class="form-group">
                                 <label for="password">Новый пароль:</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
@@ -105,13 +103,14 @@
                                 <label for="passwordRepeat">Повторите пароль:</label>
                                 <input type="password" class="form-control" id="passwordRepeat" name="passwordRepeat" required>
                             </div>
+                            <br>
                             <button id="changePasswordButton" type="submit" class="btn btn-primary">Изменить</button>
                         </form>
                     </div>
 
                     <div id="edit-profile" class="tab-pane fade">
                         <h4>Редактировать профиль</h4>
-                        <form id="changeUserForm">
+                        <form class="form-edit" id="changeUserForm">
                             <div class="form-group">
                                 <label for="firstName">Имя:</label>
                                 <input type="text" class="form-control" id="firstName" name="firstName" required>
@@ -120,6 +119,7 @@
                                 <label for="lastName">Фамилия:</label>
                                 <input type="text" class="form-control" id="lastName" name="lastName" required>
                             </div>
+                            <br>
                             <button id="changeUserButton" type="submit" class="btn btn-primary">Отправить</button>
                         </form>
                     </div>

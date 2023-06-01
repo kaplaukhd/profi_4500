@@ -34,12 +34,12 @@ public class Initialize {
         roleService.saveAll(roles);
 
 
-        User user = new User("Denis", "Kaplaukhd", "kaplaukhd@gmail.com", "admin", "user.jpg");
+        User user = new User("Иван", "Иванов", "admin@mail.ru", "admin", "user.jpg");
         user.getRoles().add(roleAdmin);
 
         Set<Article> list = new HashSet<>();
         for (int i = 0; i < 10; i++) {
-            String imgUrl = i % 2 == 0 ? "http://gawain.ru/images/unesco/7_1_vrangel.jpg" : "";
+            String imgUrl = i % 2 == 0 ? "image.jpg" : "";
             list.add(new Article("Xiaomi совсем недавно представила свой среднебюджетный смартфон Civi 3. На фоне конкурентов он выделяется своим элегантным дизайном и интересной палитрой расцветок корпуса, в которую входят зеленый, фиолетовый, золотой и серый цвет. \n" + "\n" + "В рамках празднования 100-летия Disney компания выпускает еще одну брендированную расцветку. В ней смартфон будет продаваться ограниченным тиражом.\n" + "\n" + "Пока что дизайн корпуса устройства держится в секрете — Xiaomi показала только коробку и интерфейс новинки. Последний преобразился до неузнаваемости — изменились не только обои, но и иконки приложений, а также дизайн внутри них.", "Xiaomi показала эксклюзивный смартфон к 100-летию Disney",  imgUrl));
         }
 
